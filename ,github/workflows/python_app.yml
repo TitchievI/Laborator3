@@ -1,0 +1,14 @@
+name: Python verificare aplicatie
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    -name: Setam Python
+     uses: actions/setup-python@v5
+     with:
+       python-version:'3.x'
+    -name: Executa aplicatia
+    run: python script.py
